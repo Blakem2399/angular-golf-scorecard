@@ -1,0 +1,7 @@
+<nav>
+  <button mat-raised-button (click)="toggle()">toggle</button>
+</nav>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  The Box is now {{ isOpen ? 'Open' : 'Closed' }}
+</div>
