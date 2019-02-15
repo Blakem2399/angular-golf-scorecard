@@ -8,7 +8,7 @@ import {ScoreCardComponent} from './score-card/score-card.component';
 const routes: Routes = [
   {
     path: '' ,
-    redirectTo: '/game',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     component: SettingsComponent
   },
   {
-    path: 'open',
+    path: 'home',
     component: OpenCloseComponent
   },
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/game'
+    redirectTo: '/home'
   }
 ];
 

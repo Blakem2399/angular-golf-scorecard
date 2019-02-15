@@ -5,9 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NamePipePipe implements PipeTransform {
 
-  transform(value: ): string {
+  transform(value: string): string {
 
     return null;
   }
 
 }
+
