@@ -1,5 +1,6 @@
 <nav>
   <button mat-raised-button (click)="toggle()">toggle</button>
+  <button mat-raised-button color="primary" (click)="auth.login()"></button>
 </nav>
 
 <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">

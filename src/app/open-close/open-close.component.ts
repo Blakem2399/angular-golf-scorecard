@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {AuthService} from '../auth/auth.service';
 
 @Component({
   selector: 'app-open-close',
@@ -38,5 +39,6 @@ export class OpenCloseComponent implements OnInit {
   toggle() {
     this.isOpen = !this.isOpen;
   }
+
 
 }
