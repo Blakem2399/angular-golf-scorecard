@@ -11,8 +11,8 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-<mat-select placeholder="Select Tee">
-  <mat-option *ngFor="let tee of teeArray" value="{{tee.teeTypeId}}">
+<mat-select placeholder="Select Tee" (selectionChange)="changeTee($event.value)">
+  <mat-option *ngFor="let tee of teeArray" value="{{tee.teeTypeId - 1}}">
     {{tee.teeType}}
   </mat-option>
 </mat-select>

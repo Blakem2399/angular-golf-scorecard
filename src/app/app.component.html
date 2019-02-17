@@ -3,7 +3,7 @@
   <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
   <h1>Golfer Mate</h1>
   <span class="fill-remaining-space"></span>
-  <span>TODO: Add side function or detail</span>
+
 </mat-toolbar>
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="push" [autoFocus]="false" fixedTopGap="56">
@@ -12,7 +12,7 @@
       <a mat-list-item routerLink="/welcome"><mat-icon>account_circle</mat-icon><span> User </span></a>
       <mat-divider></mat-divider>
       <a mat-list-item routerLink="/open"><mat-icon>home</mat-icon><span> Home </span></a>
-      <a mat-list-item routerLink="/welcome"><mat-icon>golf_course</mat-icon> Game </a>
+      <a mat-list-item routerLink="/game"><mat-icon>golf_course</mat-icon> Game </a>
       <a mat-list-item routerLink="/settings"><mat-icon>settings</mat-icon> Course Settings </a>
     </mat-nav-list>
 

@@ -3,6 +3,7 @@ import {ApiService} from '../api.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import RootObject = namespace.RootObject;
 import {el} from '@angular/platform-browser/testing/src/browser_util';
+import TeeBox = namespace.TeeBox;
 
 
 @Component({
@@ -11,9 +12,9 @@ import {el} from '@angular/platform-browser/testing/src/browser_util';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-  public courseData: any;
 
-   teeArray: any[];
+
+   teeArray: TeeBox[];
 
   constructor(
     private fetch: ApiService,
@@ -22,21 +23,22 @@ export class SettingsComponent implements OnInit {
   private selectedCourse: string;
 
   ngOnInit() {
-    this.updateCourse('11819')
+    this.getTee()
   }
 
-  updateCourse( str: string) {
-    this.fetch.getCourse(str)
-      .subscribe(
-        result => this.courseData = result,
-        error => console.log('Error :: ' + error)
-      );
-    if (this.courseData !== undefined) {
-      console.log(this.courseData);
-      this.teeArray = this.courseData.data.holes[0].teeBoxes
-    }
-
-
+  updateCourse(str: string) {
+    this.fetch.globalCourse = str;
+    this.getTee();
   }
+  getTee(){
+    this.fetch.getTee().subscribe(
+      result => this.teeArray = result,
+      error => console.log('Error :: ' + error)
+    )
+  }
+changeTee(index: number){
+    this.fetch.changeTee(index);
+
+}
 
 }
