@@ -1,5 +1,5 @@
 <mat-card>
-  <form [formGroup]="courseForm">
+  <form >
     <h1>Settings</h1>
     <mat-form-field appearance="outline">
 
@@ -12,8 +12,8 @@
 
     <mat-form-field appearance="outline">
 <mat-select placeholder="Select Tee">
-  <mat-option>
-    placeholder
+  <mat-option *ngFor="let tee of teeArray" value="{{tee.teeTypeId}}">
+    {{tee.teeType}}
   </mat-option>
 </mat-select>
     </mat-form-field>
