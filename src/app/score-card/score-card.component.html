@@ -5,7 +5,10 @@
     <!-- Name Column -->
     <ng-container matColumnDef="name" sticky>
       <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element">
+      <th mat-header-cell *matHeaderCellDef> Yardage </th>
+      <th mat-header-cell *matHeaderCellDef> HCP </th>
+      <th mat-header-cell *matHeaderCellDef> par </th>
+      <td mat-cell *matCellDef="let player">
 
         <mat-form-field appearance="standard">
             <input matInput placeholder="name" value="{{player.name}}">
@@ -14,148 +17,202 @@
     </ng-container>
 
     <!-- Hole Columns -->
-    <ng-container  matColumnDef="H1">
+    <ng-container class="hole" matColumnDef="H1">
       <th mat-header-cell *matHeaderCellDef> Hole 1 </th>
-      <td mat-cell *matCellDef="let player">
+      <th mat-header-cell *matHeaderCellDef> {{yards[0]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[0]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[0]}} </th>
+      <td mat-cell *matCellDef="let player ">
         <mat-form-field appearance="standard">
           <input matInput placeholder="name" value="{{player.holes[0]}}">
         </mat-form-field>
       </td>
     </ng-container>
 
-    <ng-container  matColumnDef="H2">
+    <ng-container class="hole" matColumnDef="H2">
       <th mat-header-cell *matHeaderCellDef> Hole 2 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[1]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[1]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[1]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0"  value="{{player.holes[1]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H3">
+    <ng-container class="hole" matColumnDef="H3">
       <th mat-header-cell *matHeaderCellDef> Hole 3 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[2]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[2]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[2]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[2]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H4">
+    <ng-container class="hole" matColumnDef="H4">
       <th mat-header-cell *matHeaderCellDef> Hole 4 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[3]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[3]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[3]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[3]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H5">
+    <ng-container class="hole" matColumnDef="H5">
       <th mat-header-cell *matHeaderCellDef> Hole 5 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[4]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[4]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[4]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[4]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H6">
+    <ng-container class="hole" matColumnDef="H6">
       <th mat-header-cell *matHeaderCellDef> Hole 6 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[5]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[5]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[5]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[5]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H7">
+    <ng-container class="hole" matColumnDef="H7">
       <th mat-header-cell *matHeaderCellDef> Hole 7 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[6]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[6]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[6]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[6]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H8">
+    <ng-container class="hole" matColumnDef="H8">
       <th mat-header-cell *matHeaderCellDef> Hole 8 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[7]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[7]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[7]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[7]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H9">
+    <ng-container class="hole" matColumnDef="H9">
       <th mat-header-cell *matHeaderCellDef> Hole 9 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[8]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[8]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[8]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[8]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H10">
+    <ng-container class="hole" matColumnDef="H10">
       <th mat-header-cell *matHeaderCellDef> Hole 10 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[9]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[9]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[9]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="name" value="{{player.holes[0]}}">
+          <input matInput placeholder="0" value="{{player.holes[9]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H11">
+    <ng-container class="hole" matColumnDef="H11">
       <th mat-header-cell *matHeaderCellDef> Hole 11 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[10]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[10]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[10]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="0" value="{{player.holes[11]}}">
+          <input matInput placeholder="0" value="{{player.holes[10]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H12">
+    <ng-container class="hole" matColumnDef="H12">
       <th mat-header-cell *matHeaderCellDef> Hole 12 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[11]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[11]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[11]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
           <input matInput placeholder="0" value="{{player.holes[11]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H13">
+    <ng-container class="hole" matColumnDef="H13">
       <th mat-header-cell *matHeaderCellDef> Hole 13 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[12]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[12]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[12]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="0" value="{{player.holes[11]}}">
+          <input matInput placeholder="0" value="{{player.holes[12]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H14">
+    <ng-container class="hole" matColumnDef="H14">
       <th mat-header-cell *matHeaderCellDef> Hole 14 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[13]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[13]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[13]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="0" value="{{player.holes[11]}}">
+          <input matInput placeholder="0" value="{{player.holes[13]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H15">
+    <ng-container class="hole" matColumnDef="H15">
       <th mat-header-cell *matHeaderCellDef> Hole 15 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[14]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[14]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[14]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="0" value="{{player.holes[11]}}">
+          <input matInput placeholder="0" value="{{player.holes[14]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H16">
+    <ng-container class="hole" matColumnDef="H16">
       <th mat-header-cell *matHeaderCellDef> Hole 16 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[15]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[15]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[15]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="0" value="{{player.holes[11]}}">
+          <input matInput placeholder="0" value="{{player.holes[15]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H17">
+    <ng-container class="hole" matColumnDef="H17">
       <th mat-header-cell *matHeaderCellDef> Hole 17 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[16]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[16]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[16]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="0" value="{{player.holes[11]}}">
+          <input matInput placeholder="0" value="{{player.holes[16]}}">
         </mat-form-field>
       </td>
     </ng-container>
-    <ng-container  matColumnDef="H18">
+    <ng-container class="hole" matColumnDef="H18">
       <th mat-header-cell *matHeaderCellDef> Hole 18 </th>
+      <th mat-header-cell *matHeaderCellDef> {{yards[17]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{hcp[17]}} </th>
+      <th mat-header-cell *matHeaderCellDef> {{par[17]}} </th>
       <td mat-cell *matCellDef="let player">
         <mat-form-field appearance="standard">
-          <input matInput placeholder="0" value="{{player.holes[11]}}">
+          <input matInput placeholder="0" value="{{player.holes[17]}}">
         </mat-form-field>
       </td>
     </ng-container>
@@ -179,6 +236,7 @@
       </td>
     </ng-container>
 
+    
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
