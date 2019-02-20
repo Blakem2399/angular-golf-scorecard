@@ -13,7 +13,7 @@ import {AngularFireDatabase} from '@angular/fire/database';
 
 export class AuthService {
 
-  private user$: Observable<firebase.User | null>;
+   user$: Observable<firebase.User | null>;
 
 
 

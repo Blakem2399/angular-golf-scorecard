@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SettingsComponent } from './settings/settings.component';
-import { OpenCloseComponent } from './open-close/open-close.component';
+
 import { ScoreCardComponent } from './score-card/score-card.component';
 import {DemoMaterialModule} from './material-module';
 import {LayoutModule} from '@angular/cdk/layout';
@@ -22,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     AppComponent,
     SettingsComponent,
-    OpenCloseComponent,
+
     ScoreCardComponent,
     NamePipePipe
   ],

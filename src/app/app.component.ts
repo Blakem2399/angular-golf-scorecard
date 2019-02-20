@@ -11,7 +11,7 @@ export class AppComponent {
   events: string[] = [];
   opened: boolean;
 
-  constructor(private authService:AuthService) {
+  constructor(public authService:AuthService) {
 
   }
 
