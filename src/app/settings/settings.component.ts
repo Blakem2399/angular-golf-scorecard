@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiService} from '../api.service';
+import {ApiService} from '../api/api.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import RootObject = namespace.RootObject;
 import {el} from '@angular/platform-browser/testing/src/browser_util';

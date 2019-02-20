@@ -3,6 +3,8 @@
   <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
   <h1>Golfer Mate</h1>
   <span class="fill-remaining-space"></span>
+  <span><button mat-raised-button *ngIf="!(authService.user$ | async)?.uid" (click)="authService.login()">login</button></span>
+  <span><button mat-raised-button *ngIf="(authService.user$ | async)?.uid" (click)="authService.logout()">logout</button></span>
 
 </mat-toolbar>
 <mat-sidenav-container class="example-container">
