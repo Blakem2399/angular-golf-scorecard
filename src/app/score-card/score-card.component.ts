@@ -21,6 +21,9 @@ export class ScoreCardComponent implements OnInit {
 
   ngOnInit() {
     this.getHoles();
+    this.getYards();
+    this.getPar();
+    this.getHCP();
   }
 
   getHoles(){
@@ -45,6 +48,7 @@ export class ScoreCardComponent implements OnInit {
       result => this.par = result,
       error => console.log('Error :: ' + error))
   }
+
 
 
 }

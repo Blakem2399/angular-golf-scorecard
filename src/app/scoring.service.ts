@@ -9,7 +9,7 @@ export class ScoringService {
 
   constructor(
     private fetch: ApiService,
-    private db: AngularFireDatabase
+
 
   ) {
 
