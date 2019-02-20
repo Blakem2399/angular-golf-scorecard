@@ -8,7 +8,7 @@ import {ScoreCardComponent} from './score-card/score-card.component';
 const routes: Routes = [
   {
     path: '' ,
-    redirectTo: '/home',
+    redirectTo: '/index.html',
     pathMatch: 'full',
   },
   {

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "Golf": "golfer-mate"
+    "Golf": "golfer-mate",
+    "default": "golfer-mate"
   }
 }
